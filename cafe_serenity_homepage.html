@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cafe Serenity — 落ち着く小さなカフェ</title>
+  <meta name="description" content="落ち着いた雰囲気のカフェ、Cafe Serenity の公式ページ。メニュー、アクセス、コーヒーのコンセプトをご紹介します。">
+  <style>
+    :root{
+      --brown:#3b2f2f; /* 焦げ茶 */
+      --mint:#8dd3c7;  /* ミントグリーン */
+      --beige:#f3e9dc; /* ベージュ */
+      --pink:#f2c6c6;  /* 優しいピンク */
+      --text:#2b2b2b;
+      --max-width:1100px;
+      --radius:12px;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text); background: linear-gradient(180deg,var(--beige), #fff);
+      -webkit-font-smoothing:antialiased;
+    }
+    .container{max-width:var(--max-width);margin:32px auto;padding:24px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-radius:16px;background:linear-gradient(90deg,var(--brown),#4b3f3f);color:var(--beige);
+      box-shadow: 0 6px 18px rgba(59,47,47,0.12);
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--mint),var(--pink));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brown);font-size:18px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.12);
+    }
+    nav a{color:var(--beige);text-decoration:none;margin-left:14px;font-weight:600}
+
+    /* Hero */
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:28px 0;
+    }
+    .hero-card{background:var(--glass);backdrop-filter: blur(6px);padding:28px;border-radius:16px}
+    .hero h1{margin:0 0 8px;font-size:32px;color:var(--brown)}
+    .hero p.lead{margin:0 0 16px;color:#333}
+    .cta{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--mint);color:var(--brown);font-weight:700;text-decoration:none}
+
+    /* Coffee concept */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+    .card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 6px 16px rgba(0,0,0,0.06)}
+    .muted{color:#666;font-size:14px}
+
+    /* Menu */
+    .menu-list{display:flex;flex-direction:column;gap:12px}
+    .menu-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(90deg,#fff,#fff);border:1px solid rgba(0,0,0,0.04)}
+    .price{font-weight:700}
+
+    /* Access */
+    .access{display:flex;gap:18px;align-items:flex-start}
+    .map{flex:1;border-radius:12px;overflow:hidden;min-height:180px;background:linear-gradient(90deg,var(--pink),var(--beige));display:flex;align-items:center;justify-content:center;color:var(--brown);font-weight:700}
+    .address{width:360px}
+
+    footer{margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(90deg,#fff,var(--beige));display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media(max-width:920px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+      .access{flex-direction:column}
+      .address{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div>
+          <div style="font-weight:800">Cafe Serenity</div>
+          <div class="muted" style="font-size:13px">落ち着いた時間と、丁寧に淹れた一杯を</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">コンセプト</a>
+        <a href="#menu">メニュー</a>
+        <a href="#access">アクセス</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>ゆったり、静かなひととき</h1>
+        <p class="lead">焦げ茶とミントの落ち着く配色。心地よいBGMとともに、丁寧に淹れたコーヒーをどうぞ。</p>
+        <p class="muted">早朝の焙煎から提供まで一杯ずつ。季節のおすすめメニューもございます。</p>
+        <div style="margin-top:16px">
+          <a class="cta" href="#menu">メニューを見る</a>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0">営業時間</h3>
+        <p class="muted">平日 9:00 — 19:00 / 土日祝 10:00 — 18:00</p>
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(0,0,0,0.06)">
+        <h4 style="margin:6px 0">季節のおすすめ</h4>
+        <p class="muted">ミントカフェラテ — 自家製ミントシロップをほんのり。春は桜ラテなど。</p>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="grid">
+        <div class="card">
+          <h3>コーヒーのコンセプト</h3>
+          <p class="muted">Cafe Serenity のコーヒーは「丁寧さ」と「余白」を大切にしています。豆は中煎り〜中深煎りを中心に、酸味とコクのバランスを意識。抽出はハンドドリップとエスプレッソの両方で、注文ごとに最適な一杯をお作りします。</p>
+          <ul style="margin-top:12px">
+            <li>シングルオリジンの豆を季節ごとに入れ替え</li>
+            <li>オリジナルのミントシロップ（無香料）</li>
+            <li>デザートは自家製の焼き菓子中心</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>店内の雰囲気</h3>
+          <p class="muted">深みのある木材と柔らかな照明。席数は多くありませんが、ひとりで読書をするのに丁度良い余白を残しています。仕事の打ち合わせや静かなデートにもおすすめです。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" style="margin-top:20px">
+      <h2>メニュー</h2>
+      <div class="menu-list">
+        <div class="menu-item"><div><strong>ハンドドリップ（シングルオリジン）</strong><div class="muted">一杯ずつ丁寧に</div></div><div class="price">¥650</div></div>
+        <div class="menu-item"><div><strong>カフェラテ</strong><div class="muted">ミルクとの調和を楽しむ</div></div><div class="price">¥680</div></div>
+        <div class="menu-item"><div><strong>ミントカフェラテ（季節限定）</strong><div class="muted">自家製ミントシロップ入り</div></div><div class="price">¥720</div></div>
+        <div class="menu-item"><div><strong>エスプレッソ（シングル）</strong><div class="muted">濃厚な一口</div></div><div class="price">¥420</div></div>
+        <div class="menu-item"><div><strong>自家製スコーン</strong><div class="muted">焼き立ての素朴な甘さ</div></div><div class="price">¥320</div></div>
+      </div>
+    </section>
+
+    <section id="access" style="margin-top:20px">
+      <h2>アクセス</h2>
+      <div class="access">
+        <div class="map">地図をここに埋め込み（例: Google Maps iframe）</div>
+        <div class="address card">
+          <h4 style="margin-top:0">Cafe Serenity</h4>
+          <p class="muted">〒000-0000 東京都中央区カフェ町1-2-3<br>最寄り駅：静かな駅 徒歩6分</p>
+          <p class="muted">駐車場：近隣コインパーキングをご利用ください。</p>
+          <p><strong>電話:</strong> 03-1234-5678</p>
+          <p><strong>メール:</strong> hello@cafeserenity.example</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:20px">
+      <h2>お問い合わせ</h2>
+      <div class="card">
+        <form onsubmit="alert('送信シミュレーション：フォームデータは実際には送信されません。');return false;">
+          <label>お名前<br><input type="text" name="name" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)"></label>
+          <div style="height:8px"></div>
+          <label>メッセージ<br><textarea name="message" rows="4" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)"></textarea></label>
+          <div style="height:12px"></div>
+          <button type="submit" style="padding:10px 14px;border-radius:10px;border:none;background:var(--mint);font-weight:700;color:var(--brown)">送信</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div style="font-weight:800">Cafe Serenity</div>
+        <div class="muted">静かな時間と、丁寧な一杯を</div>
+      </div>
+      <div class="muted">© Cafe Serenity — イメージサイト</div>
+    </footer>
+  </div>
+</body>
+</html>
