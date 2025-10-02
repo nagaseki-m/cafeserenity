@@ -1,4 +1,3 @@
-<style>
     :root{
       --brown:#3b2f2f; /* 焦げ茶 */
       --mint:#8dd3c7;  /* ミントグリーン */
@@ -60,4 +59,3 @@
       .access{flex-direction:column}
       .address{width:100%}
     }
-  </style>
